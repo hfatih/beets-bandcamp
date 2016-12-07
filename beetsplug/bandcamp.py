@@ -144,7 +144,7 @@ class BandcampPlugin(plugins.BeetsPlugin):
             return AlbumInfo(album, album_id, artist, artist_url, tracks,
                              year=release.year, month=release.month,
                              day=release.day, country='XW', media='Digital Media',
-                             data_source='bandcamp', data_url=url)
+                             data_source='bandcamp', data_url=url, mediums=1)
         except requests.exceptions.RequestException as e:
             self._log.debug("Communication error while fetching album {0!r}: "
                             "{1}".format(url, e))
